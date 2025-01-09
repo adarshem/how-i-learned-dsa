@@ -9,13 +9,6 @@ After spending time researching through internet resources, YouTube videos, and 
 This plan is designed to help me thoroughly understand the basics of DSA and cover the most important and widely used data structures and algorithms. 
 I'm sharing it through this repository in the hope that it might benefit others who are on a similar journey. 😊  
 
-## 📚 Table of Contents
-- [Learning Plan](#-learning-plan)
-- [Repository Structure](#-repository-structure)
-- [Languages Used](#️-languages-used)
-- [Goals](#-goals)
-- [Resources](#-resources)
-
 ## 📚 Learning Plan
 1. **Big O Notation**  
    [Learn more](./Big-O/Notes.md)  
