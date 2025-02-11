@@ -1,0 +1,19 @@
+{
+  "name": "how-i-learned-dsa",
+  "version": "1.0.0",
+  "description": "Welcome to my **Data Structures and Algorithms (DSA)** study repository! 🚀",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.3",
+    "ts-node": "^10.0.0"
+  }
+}
