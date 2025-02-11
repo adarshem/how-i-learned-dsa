@@ -43,6 +43,24 @@ I'm sharing it through this repository in the hope that it might benefit others 
 ## 🔗 Resources
 - Explore the **[Resources/](./Resources/)** folder for recommended books, useful links, and platforms.
 
+## 🚀 How to Run
+
+To run a specific TypeScript file, follow these steps:
+
+1. **Install dependencies**:
+   ```sh
+   pnpm install
+   ```
+2. **Run a specific TypeScript file**:
+   ```sh
+   pnpm start relative path to the file
+   ```
+    *For example, to run excercise.ts from Big-0*
+      ```sh
+      pnpm start src/Big-O/excercise.ts
+   ```
+  
 ---
+
 
 Feel free to fork, contribute, or suggest improvements! 😊
