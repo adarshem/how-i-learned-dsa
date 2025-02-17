@@ -59,7 +59,16 @@ To run a specific TypeScript file, follow these steps:
       ```sh
       pnpm start src/Big-O/excercise.ts
    ```
-  
+
+To run unit tests, please follow these steps:
+1. **Run a specific test**:
+   ```sh
+   pnpm test relative_path_to_the_spec_file
+   ```
+2. **Run all specs**:
+   ```sh
+   pnpm test
+   ```
 ---
 
 
