@@ -29,16 +29,25 @@
 // if result < 10 -> push(result)
 //
 
+// Time Complexity: (O(n))
+// Space Complexity: (O(n))
+
 function plusOne(digits: number[]): number[] {
   if (digits?.length === 0) return [];
+
   if (digits?.length === 1 && digits[0] === 9) {
-    return [1, 0];
+    digits[0] = 1;
+    digits.push(0);
+    return digits;
   }
+
   let lastDigitplusOne = (digits.pop() || 0) + 1;
+
   if (lastDigitplusOne < 10) {
     digits.push(lastDigitplusOne);
     return digits;
   }
+
   plusOne(digits);
   digits.push(0);
   return digits;
@@ -47,3 +56,4 @@ function plusOne(digits: number[]): number[] {
 console.log(plusOne([1, 2, 3, 4]));
 console.log(plusOne([1, 2, 3, 9]));
 console.log(plusOne([9, 9, 9, 9]));
+console.log(plusOne([9, 0, 9, 9]));
