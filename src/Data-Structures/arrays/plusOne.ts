@@ -32,7 +32,7 @@
 // Time Complexity: (O(n))
 // Space Complexity: (O(n))
 
-function plusOne(digits: number[]): number[] {
+export function plusOne(digits: number[]): number[] {
   if (digits?.length === 0) return [];
 
   if (digits?.length === 1 && digits[0] === 9) {
@@ -59,7 +59,7 @@ console.log(plusOne([9, 9, 9, 9]));
 console.log(plusOne([9, 0, 9, 9]));
 
 // Space complexity is reduced to O(1)
-function plusOneImproved(input: number[]): number[] {
+export function plusOneImproved(input: number[]): number[] {
   for (let i = input.length - 1; i >= 0; i--) {
     if (input[i] < 9) {
       input[i]++;
@@ -70,10 +70,13 @@ function plusOneImproved(input: number[]): number[] {
 
   // This is to take care of the cases like [9,9] where the above loop would return [0,0]
   if (input[0] === 0) {
-    return [1, ...input];
+    input[0] = 1;
+    input.push(0);
+    return input;
   }
-  
+
   return input;
 }
 
 console.log(plusOneImproved([9, 8, 9, 9]));
+console.log(plusOneImproved([9, 9, 9, 9]));
