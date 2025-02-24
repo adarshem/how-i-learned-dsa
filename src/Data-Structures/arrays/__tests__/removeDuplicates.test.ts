@@ -5,7 +5,7 @@ import {
 
 describe('removeDuplicates', () => {
   test('should remove duplicates from sorted array', () => {
-    expect(getNumberOfUniqueElements([1,3,3,4,5,6,7])).toBe(6);
+    expect(getNumberOfUniqueElements([1, 3, 3, 4, 5, 6, 7])).toBe(6);
   });
 
   test('should remove duplicates from sorted array', () => {
