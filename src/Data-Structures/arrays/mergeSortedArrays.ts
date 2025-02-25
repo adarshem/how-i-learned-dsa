@@ -33,7 +33,7 @@ export function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
 /**
  Do not return anything, modify nums1 in-place instead.
  */
-function mergeInPlace(
+export function mergeInPlace(
   nums1: number[],
   m: number,
   nums2: number[],
