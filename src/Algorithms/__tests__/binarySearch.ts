@@ -1,4 +1,4 @@
-import binarySearch, { searchRange } from '../binarySearch';
+import binarySearch, { searchRange } from '../binarySearch/binarySearch';
 
 describe('binarySearch', () => {
   it('should return the index of the target in a sorted array', () => {
