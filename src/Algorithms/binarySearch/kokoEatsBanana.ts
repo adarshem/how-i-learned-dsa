@@ -28,17 +28,17 @@ function minEatingSpeed(piles: number[], h: number): number {
     let hours = 0;
 
     for (let pile of piles) {
-      hours += Math.ceil(pile / mid);
+      hours += Math.ceil(pile / mid); // Calculate hours needed for each pile at speed mid
     }
 
     if (hours > h) {
-      left = mid + 1;
+      left = mid + 1; // If hours exceed h, increase the speed
     } else {
-      right = mid;
+      right = mid; // If hours are within h, try a slower speed
     }
   }
 
-  return left;
+  return left; // Return the minimum speed that allows Koko to eat all bananas within h hours
 }
 
-console.log(minEatingSpeed([3, 6, 7, 11], 8)); // 4
+console.log(minEatingSpeed([3, 6, 7, 11], 8)); // Output: 4
