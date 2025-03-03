@@ -24,7 +24,7 @@ function isBadVersion(version: number): boolean {
   return version >= bad;
 }
 
-function firstBadVersion(n: number): number {
+export function firstBadVersion(n: number): number {
   let left = 1;
   let right = n;
 

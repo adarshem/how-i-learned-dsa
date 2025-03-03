@@ -19,7 +19,7 @@
 // Input: piles = [30,11,23,4,20], h = 6
 // Output: 23
 
-function minEatingSpeed(piles: number[], h: number): number {
+export function minEatingSpeed(piles: number[], h: number): number {
   let left = 1;
   let right = Math.max(...piles);
 
