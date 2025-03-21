@@ -1,4 +1,4 @@
-function moveZeroes(nums: number[]): void {
+export default function moveZeroes(nums: number[]): void {
   let lastNonZeroFoundAt = 0;
 
   // Iterate through the array
