@@ -45,3 +45,19 @@ export function validAnagramOptimized(str1: string, str2: string): boolean {
 
   return true;
 }
+
+function sameFrequency(num1: number, num2: number): boolean {
+  const frequencyCounter: { [key: string]: number } = {};
+
+  for (const digit of num1.toString()) {
+    frequencyCounter[digit] = (frequencyCounter[digit] || 0) + 1;
+  }
+
+  for (const digit of num2.toString()) {
+    if (!frequencyCounter[digit]) {
+      return false;
+    }
+    frequencyCounter[digit] -= 1;
+  }
+  return true;
+}
