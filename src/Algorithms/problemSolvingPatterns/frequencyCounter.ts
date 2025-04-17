@@ -46,18 +46,41 @@ export function validAnagramOptimized(str1: string, str2: string): boolean {
   return true;
 }
 
-function sameFrequency(num1: number, num2: number): boolean {
-  const frequencyCounter: { [key: string]: number } = {};
+export function areThereDuplicates(...args: number[]): boolean {
+  const frequencyCounter: { [key: number]: number } = {};
 
-  for (const digit of num1.toString()) {
-    frequencyCounter[digit] = (frequencyCounter[digit] || 0) + 1;
+  for (const arg of args) {
+    frequencyCounter[arg] = (frequencyCounter[arg] || 0) + 1;
+    if (frequencyCounter[arg] > 1) return true;
+  }
+  return false;
+}
+
+export function constructNote(message: string, letters: string): boolean {
+  const letterFrequency: { [key: string]: number } = {};
+
+  for (const letter of letters) {
+    letterFrequency[letter] = (letterFrequency[letter] || 0) + 1;
   }
 
-  for (const digit of num2.toString()) {
-    if (!frequencyCounter[digit]) {
+  for (const char of message) {
+    if (!letterFrequency[char]) {
       return false;
     }
-    frequencyCounter[digit] -= 1;
+    letterFrequency[char] -= 1;
   }
   return true;
+}
+
+export function findAllDuplicates(nums: number[]): number[] {
+  const frequencyCounter: { [key: string]: number } = {};
+  const duplicateNums = [];
+
+  for (const num of nums) {
+    frequencyCounter[num] = (frequencyCounter[num] || 0) + 1;
+    if (frequencyCounter[num] === 2) {
+      duplicateNums.push(num);
+    }
+  }
+  return duplicateNums;
 }
